@@ -1,0 +1,27 @@
+-framework for Reactjs
+Difference between a library and a framework?
+bigger than a library
+Provides SDK
+Built in Server Side Rendering
+
+Difference between CSR and SSR
+so in CSR the client will download the code and render it in client Side
+
+SSR-
+Fetch Data
+Pre-Render
+Good for SEO
+
+SSR VS CSR
+performance
+cache Data
+great for SEO
+
+two ways of routing-
+App based and file based
+
+three folders in nextjs
+Public pages styles
+Public-used to store static files like images
+pages-used to store source code
+styles-used to store CSS
