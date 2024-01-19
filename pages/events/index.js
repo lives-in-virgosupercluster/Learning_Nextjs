@@ -1,27 +1,17 @@
 
 import Link from 'next/link'
+import Image from 'next/image';
 
-
-const Page=()=>{
+const EventsPage=({data})=>{
     return (
         <div>
         <h1>Events Page</h1>
         <div>
-        <Link href=''>
-            <img/>
-          <h2>Events in London</h2>
-         
-        </Link>
-        <Link href=''>
-            <img/>
-          <h2>Events in Barcelona</h2>
-       
-        </Link>
-        <Link href=''>
-            <img/>
-          <h2>Events in SanFrancisco</h2>
+          {data.map(ev=> (
+            <a key={ev.id}href={`events/${ev.id}`}><Image src={ev.image} alt={ev.title} width={300} height={300}/><h2>{ev.title}</h2></a>
 
-        </Link>
+          ))}
+      
         
 
         </div>
@@ -29,4 +19,15 @@ const Page=()=>{
         
     )
 }
-export default Page;
+export default EventsPage;
+
+export async function getStaticProps(){
+  const {events_categories}=await import('/data/data.json');
+ 
+  return{
+    props:{
+      data:events_categories,
+    }
+  }
+
+}

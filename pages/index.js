@@ -5,7 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
     <div className={styles.main}>
@@ -24,24 +24,8 @@ export default function Home() {
         </nav>
       </header>
       <main className={`${styles.main} ${inter.className}`}>
-        <Link href=''>
-          <h2>Events in London</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque explicabo nesciunt blanditiis, laborum minus officiis alias ipsum veritatis aliquam a fugit harum, assumenda magni voluptate id odio nisi pariatur enim perferendis aliquid rem maxime vel? Sapiente repellat at, voluptate excepturi beatae recusandae quasi modi laboriosam? Modi aliquam hic autem veniam!
-          </p>
-        </Link>
-        <Link href=''>
-          <h2>Events in Barcelona</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque explicabo nesciunt blanditiis, laborum minus officiis alias ipsum veritatis aliquam a fugit harum, assumenda magni voluptate id odio nisi pariatur enim perferendis aliquid rem maxime vel? Sapiente repellat at, voluptate excepturi beatae recusandae quasi modi laboriosam? Modi aliquam hic autem veniam!
-          </p>
-        </Link>
-        <Link href=''>
-          <h2>Events in SanFrancisco</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque explicabo nesciunt blanditiis, laborum minus officiis alias ipsum veritatis aliquam a fugit harum, assumenda magni voluptate id odio nisi pariatur enim perferendis aliquid rem maxime vel? Sapiente repellat at, voluptate excepturi beatae recusandae quasi modi laboriosam? Modi aliquam hic autem veniam!
-          </p>
-        </Link>
+        {data.map(ev=> <a key={ev.id} href={`/events/${ev.id}`}><Image width={200} height={100} alt={ev.title} src={ev.image}/><h2>{ev.title}</h2><p>{ev.description}</p></a>)}
+        
        
       </main>
       <footer className={styles.footer}>
@@ -50,4 +34,14 @@ export default function Home() {
       </div>
     </>
   )
+}
+export async function getServerSideProps(){
+  const {events_categories}=await import('/data/data.json');
+  //console.log(events_categories);
+  
+  return {
+    props:{
+      data:events_categories,
+    }
+  }
 }
