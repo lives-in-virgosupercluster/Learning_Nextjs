@@ -1,20 +1,10 @@
 import Link from "next/link";
-
-const EventsPerCatPage=({data})=>{
-    return (<div>
-        <h1>Events in London</h1>
-        <div>
-            {data.map(ev=>{
-                  <Link href='/event/event1'>Event 1</Link>
-            })}
-        <Link href='/event/event1'>Event 1</Link>
-        <Link href='/event/event2'>Event 2</Link>
-        <Link href='/event/event3'>Event 3</Link>
-        <Link href='/event/event4'>Event 4</Link>
-        <Link href='/event/event5'>Event 5</Link>
-        <Link href='/event/event6'>Event 6</Link>
-        </div>
-    </div>
+import Image from 'next/image';
+import { CatEvent } from "@/src/components/events/cateEvent";
+const EventsPerCatPage=({data,pageName})=>{
+   // console.log(data);
+    return (
+   <CatEvent data={data} pageName={pageName}></CatEvent>
     )
 }
 export default EventsPerCatPage;
@@ -30,7 +20,7 @@ export async function getStaticPaths(){
             
         };
     });
-    console.log(allPaths);
+   // console.log(allPaths);
  
     return {
        paths:allPaths,
@@ -40,12 +30,12 @@ export async function getStaticPaths(){
     };
 }
 export async function getStaticProps(context){
-    console.log(context);
+   // console.log(context);
     const id=context?.params.cat;
     const  {allEvents}=await import('/data/data.json');
      const data=allEvents.filter(ev=>ev.city===id)
-     console.log(data);
+    // console.log(data);
     return {
-        props:{data}
+        props:{data,pageName:id}
     };
 }

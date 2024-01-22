@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ul {
+    list-style: none;
+  }
+  
+  header {
+    height: 300px;
+    background: linear-gradient(305deg, #dbfff3, transparent);
+    padding: 15px 30px;
+  }
+  
+  header > div {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  header .title {
+    width: 50%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:black;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  header .topNav {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color:black;
+  }
+  
+  header .topNav ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  header .topNav ul li {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    padding:0.25rem;
+  }
+  header .topNav ul :hover{
+    background-color: white;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 80px 30px;
+    min-height: 550px;
+  }
+  
+  .home_body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .home_body .image {
+    width: 70%;
+  }
+  
+  .home_body .card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .home_body .card:hover{
+    background-color: #5f5a5a;
+    
+  }
+  
+  .home_body .card:nth-child(even) {
+    direction: rtl;
+  }
+  
+  .home_body .card .content {
+    width: 70%;
+  }
+  
+  .about_us_list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .events_page {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .events_page .card {
+    position: relative;
+  }
+  
+  .events_page .card h2 {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 38px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 20px black;
+  }
+  
+  .cat_events {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+  
+  .cat_events .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .cat_events .content .card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+  }
+  .cat_events .content .card:hover{
+    color:yellow;
+    
+  }
+  
+  .event_single_page .email_registration {
+    margin-top: 25px;
+  }
+  
+  .event_single_page .email_registration label {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+  
+  .event_single_page .email_registration input {
+    height: 40px;
+    min-width: 350px;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .event_single_page .email_registration button {
+    border-radius: 5px;
+    height: 40px;
+    min-width: 150px;
+    border: 1px solid #5f5a5a;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-weight: 600;
+    background: #dcfff3;
+    cursor: pointer;
+  }
+  
+  .event_single_page .email_registration button:hover {
+    color: #dcfff3;
+    background: #333;
+  }
+  .logo{
+    height: 5rem;
+    width: 5rem;
+  }
+  .mainimage{
+    width:21rem;
+    height: 17rem;
+  }
+  .content{
+    font-family: "Poppins", sans-serif;
+  }
+  .single{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
