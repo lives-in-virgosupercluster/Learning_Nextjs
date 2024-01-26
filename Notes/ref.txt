@@ -43,3 +43,16 @@ The data comes from a headless CMS
 The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance
 The data can be publicly cached (not user-specific). This condition can be bypassed in certain specific situation by using a Middleware to rewrite the path.
 getStaticProps always runs on the server and never on the client.
+
+
+getStaticPaths-
+
+In Next.js, the getStaticPaths function is used in conjunction with getStaticProps to enable dynamic routes with pre-rendering. When you have pages with dynamic routes, such as /posts/[id], where [id] is a dynamic parameter, you often need to generate a list of all possible values for [id] during the build process. This is where getStaticPaths comes into play.
+
+First, you define a dynamic route in your pages directory. For example, you might have a file named [id].js inside a posts directory under the pages directory. This creates a dynamic route like /posts/[id].
+
+Implement getStaticPaths:
+In the same file ([id].js), you export a function named getStaticPaths. This function is responsible for returning an object that contains the paths field, which is an array of possible values for the dynamic parameter.
+
+Implement getStaticProps:
+Additionally, you need to implement the getStaticProps function in the same file to fetch the data for a specific dynamic route.
