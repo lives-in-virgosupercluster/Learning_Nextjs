@@ -2,10 +2,12 @@ import React, { useRef } from 'react'
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+
 const SingleEvent = ({data}) => {
   const inputEmail=useRef();
   console.log(inputEmail);
   const router=useRouter();
+  const [message,setMessage]=useState("");
 
   const onSubmit=async(e)=>{
     e.preventDefault();
@@ -24,6 +26,7 @@ const SingleEvent = ({data}) => {
   });
   if(!response.ok) throw new Error(`Error:${response.status}`);
   const data=await response.json();
+  setMessage(data.message);
   console.log('POST',data);
     }
 
@@ -42,7 +45,9 @@ const SingleEvent = ({data}) => {
    <label>Get Registered for this event</label>
    <input ref={inputEmail}type="email" id="email" placeholder='Please insert your email'/><button type="submit">Submit</button>
    </form>
+   <p>{message}</p>
 </div>
+
   )
 }
 

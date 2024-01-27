@@ -52,8 +52,9 @@ ul {
   footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 1rem;
     text-align: center;
+    
   }
   
   main {
@@ -117,7 +118,7 @@ ul {
     width: 100%;
     top: 50%;
     text-align: center;
-    font-size: 38px;
+    font-size: 2rem;
     color: white;
     text-transform: uppercase;
     text-shadow: 1px 1px 20px black;
@@ -207,4 +208,66 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  @media screen and (min-width: 300px) and (max-width: 800px) {
+    /* Your styles go here */
+    header .title{
+     visibility: hidden;
+    }
+    .content p{
+    
+    }
+    .home_body .card{
+      flex-direction: column;
+      width: 150%;
+    }
+    .home_body .card:nth-child(even) {
+     direction: initial;
+    }
+    header .topNav{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header .topNav ul{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header{
+      width: 170%;
+    }
+    body{
+      width:15rem;
+    }
+    footer{
+      width:170%;
+    }
+    .events_page {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cat_events .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+      justify-content: flex-start;
+      
+    }
+    .cat_events{
+      width: 150%;
+    }
+    .cat_events .content .card{
+      width: 100%;
+    }
+    .cat_events .content .card p{
+      font-size: 1rem;
+    }
+    .event_single_page img{
+      width:400px;
+    }
+    /* Add more styles as needed */
   }
