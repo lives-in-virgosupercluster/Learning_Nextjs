@@ -47,7 +47,7 @@ ul {
     padding:0.25rem;
   }
   header .topNav ul :hover{
-    background-color: white;
+    background-color:#20e39f
   }
   footer {
     background-color: #333;
@@ -148,7 +148,7 @@ ul {
    
   }
   .cat_events .content .card:hover{
-    color:yellow;
+    color:rgb(145, 145, 145)
     
   }
   
