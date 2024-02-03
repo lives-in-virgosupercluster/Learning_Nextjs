@@ -56,3 +56,9 @@ In the same file ([id].js), you export a function named getStaticPaths. This fun
 
 Implement getStaticProps:
 Additionally, you need to implement the getStaticProps function in the same file to fetch the data for a specific dynamic route.
+
+When to use "useClient"-
+use client is necessary when using certain features that only work in client-side components, such as:
+Browser-only APIs (e.g., window, document)
+State management libraries that rely on browser APIs (e.g., Redux Toolkit)
+DOM manipulation libraries (e.g., React Query)
