@@ -44,7 +44,6 @@ The page must be pre-rendered (for SEO) and be very fast — getStaticProps gene
 The data can be publicly cached (not user-specific). This condition can be bypassed in certain specific situation by using a Middleware to rewrite the path.
 getStaticProps always runs on the server and never on the client.
 
-
 getStaticPaths-
 
 In Next.js, the getStaticPaths function is used in conjunction with getStaticProps to enable dynamic routes with pre-rendering. When you have pages with dynamic routes, such as /posts/[id], where [id] is a dynamic parameter, you often need to generate a list of all possible values for [id] during the build process. This is where getStaticPaths comes into play.
@@ -62,3 +61,9 @@ use client is necessary when using certain features that only work in client-sid
 Browser-only APIs (e.g., window, document)
 State management libraries that rely on browser APIs (e.g., Redux Toolkit)
 DOM manipulation libraries (e.g., React Query)
+
+RSCs are a new experimental feature in Next.js 13 that enable you to write React components that are executed (partially or fully) on the server-side at build time or request time.
+They offer advantages like:
+Improved initial page load performance (reduced JavaScript payload): Because RSCs are rendered on the server, the browser receives less JavaScript to download and execute, leading to faster initial rendering.
+Better SEO: With pre-rendered HTML sent from the server, search engines can more easily index your content.
+Code-splitting capabilities: You can choose which parts of an RSC render on the server and which on the client, optimizing resource usage.
