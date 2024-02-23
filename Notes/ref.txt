@@ -67,3 +67,13 @@ They offer advantages like:
 Improved initial page load performance (reduced JavaScript payload): Because RSCs are rendered on the server, the browser receives less JavaScript to download and execute, leading to faster initial rendering.
 Better SEO: With pre-rendered HTML sent from the server, search engines can more easily index your content.
 Code-splitting capabilities: You can choose which parts of an RSC render on the server and which on the client, optimizing resource usage.
+
+Statelessness:
+
+One of the key advantages of JWTs is their statelessness. They contain all the necessary information within the token itself, eliminating the need for server-side storage of session information. If statelessness is a critical requirement for your application, you might prefer relying solely on JWTs.
+Scalability:
+
+JWTs contribute to the scalability of applications because they don't require server-side storage and can be easily validated without the need to query a session store. In high-traffic scenarios, this can be beneficial for scalability.
+Token Lifetime:
+
+JWTs have a predefined lifetime, typically set by the "exp" (expiration time) claim. Once a JWT expires, the user needs to reauthenticate. Sessions, on the other hand, can be configured with various expiration and timeout policies. Consider the desired behavior for your application regarding session lifetimes and token lifetimes.
