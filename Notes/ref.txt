@@ -77,3 +77,19 @@ JWTs contribute to the scalability of applications because they don't require se
 Token Lifetime:
 
 JWTs have a predefined lifetime, typically set by the "exp" (expiration time) claim. Once a JWT expires, the user needs to reauthenticate. Sessions, on the other hand, can be configured with various expiration and timeout policies. Consider the desired behavior for your application regarding session lifetimes and token lifetimes.
+middleware code-
+
+import { NextResponse } from 'next/server'
+ 
+export function middleware(request) {
+  const currentUser = request.cookies.get('currentUser')?.value
+ 
+  if (currentUser) {
+    return NextResponse.redirect(new URL('/dashboard', request.url))
+  }
+  return NextResponse.redirect(new URL('/login', request.url))
+}
+ 
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
+}
