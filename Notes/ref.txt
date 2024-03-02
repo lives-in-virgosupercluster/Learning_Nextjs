@@ -7,8 +7,6 @@ Built in Server Side Rendering
 Difference between CSR and SSR
 so in CSR the client will download the code and render it in client Side
 
-
-
 SSR-
 Fetch Data
 Pre-Render
