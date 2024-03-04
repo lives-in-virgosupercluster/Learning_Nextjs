@@ -97,3 +97,4 @@ export const config = {
 what is storybook?
 
 A development environment and playground for UI development
+used for showing UI components or presenting it to stakeholders
