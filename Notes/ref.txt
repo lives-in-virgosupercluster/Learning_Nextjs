@@ -109,3 +109,4 @@ export default {
     },
   },
 };
+By default, Next.js will cache as much as possible to improve performance and reduce cost. This means routes are statically rendered and data requests are cached unless you opt out. 
