@@ -110,3 +110,6 @@ export default {
   },
 };
 By default, Next.js will cache as much as possible to improve performance and reduce cost. This means routes are statically rendered and data requests are cached unless you opt out. 
+Authentication verifies if the user is who they say they are. It requires the user to prove their identity with something they have, such as a username and password.
+Session Management tracks the user's state (e.g. logged in) across multiple requests.
+Authorization decides what parts of the application the user is allowed to access.
