@@ -113,3 +113,5 @@ By default, Next.js will cache as much as possible to improve performance and re
 Authentication verifies if the user is who they say they are. It requires the user to prove their identity with something they have, such as a username and password.
 Session Management tracks the user's state (e.g. logged in) across multiple requests.
 Authorization decides what parts of the application the user is allowed to access.
+
+Server Components: It's important to note that features like Server Components and conventions like the "use client" directive are not Next.js specific, but a larger part of the React ecosystem.
