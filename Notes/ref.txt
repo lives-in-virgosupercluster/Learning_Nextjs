@@ -115,3 +115,6 @@ Session Management tracks the user's state (e.g. logged in) across multiple requ
 Authorization decides what parts of the application the user is allowed to access.
 
 Server Components: It's important to note that features like Server Components and conventions like the "use client" directive are not Next.js specific, but a larger part of the React ecosystem.
+
+async: This keyword is used to define a function as asynchronous. It tells the JavaScript runtime that the function will perform asynchronous operations and might need to wait for them to complete.
+await: This keyword is used inside an async function to pause the execution of the function until a promise is resolved. It can only be used inside async functions
